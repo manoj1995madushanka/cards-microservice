@@ -1,4 +1,5 @@
 package com.example.cards.service.impl;
+
 import com.example.cards.constants.CardsConstants;
 import com.example.cards.dto.CardsDto;
 import com.example.cards.entity.Cards;
@@ -7,16 +8,16 @@ import com.example.cards.exception.ResourceNotFoundException;
 import com.example.cards.mapper.CardsMapper;
 import com.example.cards.repository.CardsRepository;
 import com.example.cards.service.ICardsService;
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Random;
 
 @Service
-@AllArgsConstructor
 public class CardsServiceImpl implements ICardsService {
 
+    @Autowired
     private CardsRepository cardsRepository;
 
     /**
